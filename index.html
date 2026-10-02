@@ -101,7 +101,7 @@
         }
 
         /* =========================
-           KOTAK PREMIUM (BRANDING BOX)
+           KOTAK EMAS TERANG PREMIUM
         ========================= */
         .branding-box {
             width: 100%;
@@ -111,17 +111,17 @@
             align-items: center;
             justify-content: center;
             
-            /* Garis kotak emas premium */
-            border: 1.5px solid rgba(212, 175, 55, 0.4); 
-            border-radius: 16px; /* Membuat sudut kotak sedikit melengkung halus */
+            /* Garis kotak solid emas terang menyala */
+            border: 2px solid #ffd700; 
+            border-radius: 16px; 
             
-            /* Background transparan gelap tipis agar teks lebih terbaca */
-            background: rgba(0, 0, 0, 0.15); 
+            /* Background transparan gelap agar kontras emasnya keluar */
+            background: rgba(0, 0, 0, 0.25); 
             
-            /* Efek bayangan pendaran emas di sekitar kotak */
+            /* Efek pendaran cahaya (glow) ganda di luar dan dalam kotak */
             box-shadow: 
-                0 0 20px rgba(212, 175, 55, 0.08),
-                inset 0 0 15px rgba(212, 175, 55, 0.05);
+                0 0 25px rgba(255, 215, 0, 0.35),
+                inset 0 0 20px rgba(255, 215, 0, 0.15);
         }
 
         /* =========================
@@ -145,18 +145,18 @@
             object-fit: contain;
             display: block;
             
-            filter: drop-shadow(0 0 15px rgba(212,175,55, 0.2)); 
+            filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.3)); 
             animation: logoGlow 3s ease-in-out infinite;
         }
 
         @keyframes logoGlow {
             0%, 100% {
                 transform: scale(1);
-                filter: drop-shadow(0 0 15px rgba(212,175,55, 0.2));
+                filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.3));
             }
             50% {
                 transform: scale(1.03);
-                filter: drop-shadow(0 0 25px rgba(212,175,55, 0.40));
+                filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.5));
             }
         }
 
@@ -177,7 +177,7 @@
                     90deg,
                     #9b7418,
                     #fff1a5,
-                    #d4af37,
+                    #ffd700,
                     #fff1a5,
                     #9b7418
                 );
@@ -188,16 +188,18 @@
             color: transparent;
 
             text-shadow:
-                0 0 25px rgba(212,175,55,.2);
+                0 0 25px rgba(255, 215, 0, 0.3);
         }
 
         .subtitle {
             margin-top: 7px;
 
-            color: #e6b8b8;
+            color: #ffe1e1;
 
             font-size: 11px;
             letter-spacing: 2px;
+            font-weight: bold;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
         }
 
         /* =========================
@@ -215,13 +217,13 @@
 
             border-radius: 19px;
 
-            border: 1px solid rgba(212,175,55,.75);
+            border: 1px solid rgba(255, 215, 0, 0.75);
 
             background: #400000;
 
             box-shadow:
                 0 20px 60px rgba(0,0,0,.40),
-                0 0 30px rgba(212,175,55,.15);
+                0 0 30px rgba(255, 215, 0, 0.2);
 
             line-height: 0;
         }
@@ -317,7 +319,7 @@
                 );
 
             border:
-                1px solid rgba(212,175,55,.65);
+                1px solid rgba(255, 215, 0, 0.75);
 
             box-shadow:
                 0 8px 25px rgba(0,0,0,.35);
@@ -332,7 +334,7 @@
                 linear-gradient(
                     135deg,
                     #ffe98a,
-                    #d4af37 45%,
+                    #ffd700 45%,
                     #a77c16
                 );
 
@@ -340,7 +342,7 @@
                 1px solid rgba(255,255,255,.15);
 
             box-shadow:
-                0 10px 30px rgba(212,175,55,.20);
+                0 10px 30px rgba(255, 215, 0, 0.25);
         }
 
         .btn:hover {
@@ -363,7 +365,7 @@
 
         .btn-register:hover {
             box-shadow:
-                0 15px 40px rgba(212,175,55,.35);
+                0 15px 40px rgba(255, 215, 0, 0.4);
         }
 
         /* =========================
@@ -374,8 +376,8 @@
             width: 100%;
             margin-top: 25px;
             padding: 15px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(255, 215, 0, 0.3);
             border-radius: 12px;
             text-align: center;
             font-size: 13px;
@@ -389,7 +391,7 @@
 
     <div class="container">
         
-        <!-- KOTAK PREMIUM EMAS (Membungkus Logo & Brand Anda) -->
+        <!-- KOTAK PREMIUM EMAS TERANG -->
         <div class="branding-box">
             <!-- LOGO -->
             <div class="logo">
@@ -406,28 +408,17 @@
             <img src="banner.png" alt="Banner">
         </div>
 
-            <!-- BUTTONS -->
+        <!-- BUTTONS -->
         <div class="buttons">
             <a href="https://rajaliga89.com" class="btn btn-login">LOGIN</a>
             <a href="https://rajaliga89.com" class="btn btn-register">DAFTAR</a>
         </div>
 
-        <!-- KOTAK INFO MASING-MASING PREMIUM -->
-        <div class="info-box-container">
-            <div class="info-box-item">MINIMAL DEPOSIT <span class="info-highlight">50.000</span></div>
-            <div class="info-box-item">MINIMAL WITHDRAW <span class="info-highlight">50.000</span></div>
-            <div class="info-box-item" style="color: #fff0a0;">BONUS NEW MEMBER 100% dan GARANSI KEKALAHAN 100%</div>
-            <div class="info-box-item">METODE DEPOSIT TRANSFER BANK, EWALLET, DAN QRIS</div>
-            <div class="info-box-item" style="color: #ff9999;">LAYANAN AKTIF 24 JAM NONSTOP</div>
-            
-            <!-- KOTAK SLOGAN PROMOSI -->
-            <div class="info-box-item" style="color: #ffe98a; font-weight: 900;">RAJALIGA89 SITUS GACOR AUTO MAXWIN 2026 X500 PASTI TURUN</div>
-            
-            <!-- KOTAK COPYRIGHT KHUSUS -->
-            <div class="info-box-item info-box-copyright">&copy; Copyright 2026 RAJALIGA89 OFFICIAL</div>
+        <!-- INFO BOX -->
+        <div class="info">
+            Selamat datang di RAJALIGA89. Pastikan Anda selalu menggunakan link resmi untuk kenyamanan dan keamanan akses akun Anda.
         </div>
-        
-    </div> <!-- PENUTUP CONTAINER UTAMA -->
+    </div>
 
 </body>
 </html>
