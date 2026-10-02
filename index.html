@@ -117,25 +117,43 @@
            LOGO (Tanpa Efek Kotak)
         ========================= */
 
+                /* =========================
+           LOGO (Responsif & Menyesuaikan)
+        ========================= */
+
         .logo {
             width: 100%;
-            max-width: 120px;
-            height: auto;
-
             display: flex;
             align-items: center;
             justify-content: center;
-
+            margin: 0 auto; /* Memastikan posisi tetap tepat di tengah */
             border-radius: 0;
-            
-            /* Mengubah background kotak agar menyatu dengan gradasi marun web */
-            background: linear-gradient(to bottom, #1d0000, #130000); 
+            background: transparent;
             border: none;
+        }
 
-            /* Menyamarkan pinggiran kotak dengan efek blur halus */
-            box-shadow: 0 0 30px #130000; 
-
+        /* Mengunci ukuran gambar asli agar tidak meluber besar */
+        .logo img {
+            width: 130px; /* Atur angka ini (misal 120px atau 140px) untuk mengunci lebar logo Anda */
+            height: auto;
+            object-fit: contain;
+            display: block;
+            
+            /* Efek pendaran cahaya langsung mengikat di pinggiran logo mahkota */
+            filter: drop-shadow(0 0 20px rgba(212,175,55, 0.2)); 
             animation: logoGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes logoGlow {
+            0%, 100% {
+                transform: scale(1);
+                filter: drop-shadow(0 0 15px rgba(212,175,55, 0.15));
+            }
+            50% {
+                transform: scale(1.03);
+                filter: drop-shadow(0 0 30px rgba(212,175,55, 0.35));
+            }
+        
         }
 
         }
