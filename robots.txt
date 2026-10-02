@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rajaliga89.com
+Sitemap: https://rajaliga89.com/sitemap.xml
