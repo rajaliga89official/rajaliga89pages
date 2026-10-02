@@ -110,15 +110,7 @@
         }
 
         /* =========================
-           LOGO (Sudah Diubah: Sesuai Bentuk Asli)
-        ========================= */
-
-               /* =========================
-           LOGO (Tanpa Efek Kotak)
-        ========================= */
-
-                /* =========================
-           LOGO (Responsif & Menyesuaikan)
+           LOGO (Sudah Dibersihkan & Dikunci)
         ========================= */
 
         .logo {
@@ -126,21 +118,21 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto; /* Memastikan posisi tetap tepat di tengah */
+            margin: 0 auto; 
             border-radius: 0;
             background: transparent;
             border: none;
         }
 
-        /* Mengunci ukuran gambar asli agar tidak meluber besar */
+        /* Mengunci ukuran lebar logo di sini agar tidak meluber besar */
         .logo img {
-            width: 130px; /* Atur angka ini (misal 120px atau 140px) untuk mengunci lebar logo Anda */
+            width: 135px; /* Mengunci logo di ukuran 135px agar pas dan proporsional */
             height: auto;
             object-fit: contain;
             display: block;
             
-            /* Efek pendaran cahaya langsung mengikat di pinggiran logo mahkota */
-            filter: drop-shadow(0 0 20px rgba(212,175,55, 0.2)); 
+            /* Pendaran cahaya disesuaikan agar menyatu rapi */
+            filter: drop-shadow(0 0 15px rgba(212,175,55, 0.15)); 
             animation: logoGlow 3s ease-in-out infinite;
         }
 
@@ -151,28 +143,7 @@
             }
             50% {
                 transform: scale(1.03);
-                filter: drop-shadow(0 0 30px rgba(212,175,55, 0.35));
-            }
-        
-        }
-
-        }
-
-        .logo img {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-        }
-
-        @keyframes logoGlow {
-            0%, 100% {
-                transform: scale(1);
-                box-shadow: 0 0 40px rgba(212,175,55,.15);
-            }
-
-            50% {
-                transform: scale(1.025);
-                box-shadow: 0 0 60px rgba(212,175,55,.28);
+                filter: drop-shadow(0 0 25px rgba(212,175,55, 0.30));
             }
         }
 
@@ -383,7 +354,7 @@
         }
 
         /* =========================
-           INFO BOX (Diselamatkan dari Terpotong)
+           INFO BOX
         ========================= */
 
         .info {
@@ -405,7 +376,7 @@
     <div class="container">
         <!-- LOGO -->
         <div class="logo">
-            <img src="logo.png" alt="Logo">
+            <img src="images/logo.png" alt="Logo RAJALIGA89">
         </div>
 
         <!-- BRAND -->
@@ -417,7 +388,7 @@
             <img src="images/banner.png" alt="Banner">
         </div>
 
-        <!-- BUTTONS (Silakan ganti tanda # dengan link tujuan resmi Anda) -->
+        <!-- BUTTONS -->
         <div class="buttons">
             <a href="#" class="btn btn-login">LOGIN</a>
             <a href="#" class="btn btn-register">DAFTAR</a>
