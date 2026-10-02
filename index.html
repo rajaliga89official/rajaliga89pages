@@ -31,7 +31,6 @@
             font-family: Arial, Helvetica, sans-serif;
             color: #fff;
 
-            /* DIUBAH MENJADI FULL MERAH GRADASI MENYALA */
             background: 
                 radial-gradient(
                     circle at 50% 30%,
@@ -99,6 +98,30 @@
 
             position: relative;
             z-index: 2;
+        }
+
+        /* =========================
+           KOTAK PREMIUM (BRANDING BOX)
+        ========================= */
+        .branding-box {
+            width: 100%;
+            padding: 25px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+            /* Garis kotak emas premium */
+            border: 1.5px solid rgba(212, 175, 55, 0.4); 
+            border-radius: 16px; /* Membuat sudut kotak sedikit melengkung halus */
+            
+            /* Background transparan gelap tipis agar teks lebih terbaca */
+            background: rgba(0, 0, 0, 0.15); 
+            
+            /* Efek bayangan pendaran emas di sekitar kotak */
+            box-shadow: 
+                0 0 20px rgba(212, 175, 55, 0.08),
+                inset 0 0 15px rgba(212, 175, 55, 0.05);
         }
 
         /* =========================
@@ -171,7 +194,7 @@
         .subtitle {
             margin-top: 7px;
 
-            color: #e6b8b8; /* Diubah agak kemerahan agar serasi */
+            color: #e6b8b8;
 
             font-size: 11px;
             letter-spacing: 2px;
@@ -365,23 +388,26 @@
 <body>
 
     <div class="container">
-        <!-- LOGO (Disesuaikan langsung ke nama file asli tanpa folder images/) -->
-        <div class="logo">
-            <img src="logo.png" alt="Logo RAJALIGA89">
+        
+        <!-- KOTAK PREMIUM EMAS (Membungkus Logo & Brand Anda) -->
+        <div class="branding-box">
+            <!-- LOGO -->
+            <div class="logo">
+                <img src="logo.png" alt="Logo RAJALIGA89">
+            </div>
+
+            <!-- BRAND -->
+            <h1 class="brand">RAJALIGA89</h1>
+            <p class="subtitle">AKSES LOGIN & DAFTAR RESMI</p>
         </div>
 
-        <!-- BRAND -->
-        <h1 class="brand">RAJALIGA89</h1>
-        <p class="subtitle">AKSES LOGIN & DAFTAR RESMI</p>
-
-        <!-- BANNER (Disesuaikan langsung ke nama file asli tanpa folder images/) -->
+        <!-- BANNER -->
         <div class="banner">
             <img src="banner.png" alt="Banner">
         </div>
 
         <!-- BUTTONS -->
         <div class="buttons">
-            <!-- Tulis link website Anda di dalam tanda kutip href di bawah ini -->
             <a href="https://rajaliga89.com" class="btn btn-login">LOGIN</a>
             <a href="https://rajaliga89.com" class="btn btn-register">DAFTAR</a>
         </div>
