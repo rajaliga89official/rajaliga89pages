@@ -31,28 +31,29 @@
             font-family: Arial, Helvetica, sans-serif;
             color: #fff;
 
+            /* BACKGROUND DIUBAH MENJADI MERAH MARUN MEWAH */
             background:
                 radial-gradient(
                     circle at 50% 0%,
-                    rgba(179, 0, 0, .30),
-                    transparent 35%
+                    rgba(255, 0, 0, .45),
+                    transparent 45%
                 ),
                 radial-gradient(
                     circle at 100% 100%,
-                    rgba(212, 175, 55, .12),
-                    transparent 30%
+                    rgba(212, 175, 55, .15),
+                    transparent 40%
                 ),
                 linear-gradient(
                     145deg,
-                    #030303,
-                    #100303 55%,
-                    #030303
+                    #2b0000,
+                    #150000 60%,
+                    #0a0000
                 );
 
             overflow-x: hidden;
         }
 
-        /* Background pattern */
+        /* Background pattern (Efek garis laser merah tipis) */
         body::before {
             content: "";
             position: fixed;
@@ -63,7 +64,7 @@
                 linear-gradient(
                     45deg,
                     transparent 48%,
-                    rgba(255, 0, 0, .025) 50%,
+                    rgba(255, 0, 0, .04) 50%,
                     transparent 52%
                 );
 
@@ -71,7 +72,7 @@
             opacity: .8;
         }
 
-        /* Red glow */
+        /* Red glow (Efek pendaran cahaya merah di tengah) */
         body::after {
             content: "";
             position: fixed;
@@ -84,7 +85,7 @@
 
             transform: translate(-50%, -50%);
 
-            background: rgba(150, 0, 0, .10);
+            background: rgba(255, 0, 0, .15);
 
             filter: blur(100px);
             pointer-events: none;
@@ -110,7 +111,7 @@
         }
 
         /* =========================
-           LOGO (Sudah Dibersihkan & Dikunci)
+           LOGO
         ========================= */
 
         .logo {
@@ -124,14 +125,12 @@
             border: none;
         }
 
-        /* Mengunci ukuran lebar logo di sini agar tidak meluber besar */
         .logo img {
-            width: 135px; /* Mengunci logo di ukuran 135px agar pas dan proporsional */
+            width: 135px; 
             height: auto;
             object-fit: contain;
             display: block;
             
-            /* Pendaran cahaya disesuaikan agar menyatu rapi */
             filter: drop-shadow(0 0 15px rgba(212,175,55, 0.15)); 
             animation: logoGlow 3s ease-in-out infinite;
         }
@@ -181,7 +180,7 @@
         .subtitle {
             margin-top: 7px;
 
-            color: #888;
+            color: #aaa;
 
             font-size: 11px;
             letter-spacing: 2px;
@@ -299,15 +298,15 @@
             background:
                 linear-gradient(
                     135deg,
-                    rgba(130,0,0,.25),
-                    rgba(30,5,5,.75)
+                    rgba(130,0,0,.45),
+                    rgba(20,0,0,.85)
                 );
 
             border:
                 1px solid rgba(212,175,55,.65);
 
             box-shadow:
-                0 8px 25px rgba(0,0,0,.35);
+                0 8px 25px rgba(0,0,0,.45);
         }
 
         /* DAFTAR */
@@ -340,12 +339,12 @@
             background:
                 linear-gradient(
                     135deg,
-                    rgba(170,0,0,.35),
-                    rgba(30,5,5,.85)
+                    rgba(200,0,0,.55),
+                    rgba(30,0,0,.95)
                 );
 
             box-shadow:
-                0 12px 35px rgba(179,0,0,.20);
+                0 12px 35px rgba(179,0,0,.35);
         }
 
         .btn-register:hover {
@@ -361,12 +360,12 @@
             width: 100%;
             margin-top: 25px;
             padding: 15px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(212, 175, 55, 0.2);
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 0, 0, 0.25);
             border-radius: 12px;
             text-align: center;
             font-size: 13px;
-            color: #ccc;
+            color: #ddd;
             line-height: 1.6;
         }
     </style>
