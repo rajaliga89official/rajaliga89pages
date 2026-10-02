@@ -146,6 +146,13 @@
                 0 0 80px rgba(179,0,0,.18);
 
             animation: logoGlow 3s ease-in-out infinite;
+            overflow: hidden; /* Ditambahkan agar gambar bulat sempurna */
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         @keyframes logoGlow {
@@ -373,265 +380,51 @@
         }
 
         /* =========================
-           INFO BOX
+           INFO BOX (Perbaikan Bagian Terpotong)
         ========================= */
 
         .info {
             width: 100%;
-
-            margin-top: 20px;
-
-            padding: 20px;
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 10px;
-
-            border-radius: 16px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(255,255,255,.035),
-                    rgba(100,0,0,.06)
-                );
-
-            border:
-                1px solid rgba(255,255,255,.07);
-        }
-
-        .info-item {
+            margin-top: 25px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 12px;
             text-align: center;
-        }
-
-        .info-icon {
-            color: var(--gold);
-
-            font-size: 18px;
-
-            margin-bottom: 7px;
-        }
-
-        .info-title {
-            color: #999;
-
-            font-size: 10px;
-
-            text-transform: uppercase;
-        }
-
-        .info-text {
-            color: #eee;
-
-            font-size: 11px;
-
-            margin-top: 4px;
-        }
-
-        /* =========================
-           STATUS
-        ========================= */
-
-        .status {
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            gap: 7px;
-
-            margin-top: 20px;
-
-            color: #666;
-
-            font-size: 10px;
-        }
-
-        .dot {
-            width: 7px;
-            height: 7px;
-
-            border-radius: 50%;
-
-            background: #32d17b;
-
-            box-shadow:
-                0 0 10px #32d17b;
-        }
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            margin-top: 18px;
-
-            text-align: center;
-
-            color: #444;
-
-            font-size: 9px;
-
+            font-size: 13px;
+            color: #ccc;
             line-height: 1.6;
-        }
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 500px) {
-
-            .container {
-                padding: 25px 13px;
-            }
-
-            .logo {
-                width: 85px;
-                height: 85px;
-
-                font-size: 22px;
-            }
-
-            .brand {
-                font-size: 25px;
-                letter-spacing: 3px;
-            }
-
-            .banner {
-                margin-top: 25px;
-                border-radius: 16px;
-            }
-
-            .buttons {
-                grid-template-columns: 1fr;
-            }
-
-            .info {
-                padding: 15px 8px;
-            }
         }
     </style>
 </head>
-
 <body>
 
-<div class="container">
-
- <!-- LOGO -->
-<div align="center">
-  <img src="images/logo.png" alt="Logo Projek" width="150">
-</div>
-
-    <!-- BRAND -->
-    <div class="brand">
-        RAJALIGA89
-    </div>
-
-    <div class="subtitle">
-        PREMIUM ACCESS
-    </div>
-
-    <!-- BANNER GAMBAR -->
-    <div class="banner">
-        <img
-            src="banner.jpg"
-            alt="Banner RAJALIGA89"
-        >
-    </div>
-
-    <!-- BUTTONS -->
-    <div class="buttons">
-
-        <a
-            href="https://rajaliga89-mvp.my.id/"
-            class="btn btn-login"
-            rel="noopener noreferrer"
-        >
-            LOGIN
-        </a>
-
-        <a
-            href="https://rajaliga89-mvp.my.id/"
-            class="btn btn-register"
-            rel="noopener noreferrer"
-        >
-            DAFTAR
-        </a>
-
-    </div>
-
-    <!-- INFO -->
-    <div class="info">
-
-        <div class="info-item">
-
-            <div class="info-icon">
-                ★
-            </div>
-
-            <div class="info-title">
-                Platform
-            </div>
-
-            <div class="info-text">
-                RAJALIGA89
-            </div>
-
+    <div class="container">
+        <!-- LOGO (Memakai tag img di dalam class .logo) -->
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
         </div>
 
-        <div class="info-item">
+        <!-- BRAND -->
+        <h1 class="brand">RAJALIGA89</h1>
+        <p class="subtitle">AKSES LOGIN & DAFTAR RESMI</p>
 
-            <div class="info-icon">
-                ✓
-            </div>
-
-            <div class="info-title">
-                Akses
-            </div>
-
-            <div class="info-text">
-                24/7
-            </div>
-
+        <!-- BANNER -->
+        <div class="banner">
+            <img src="images/banner.png" alt="Banner">
         </div>
 
-        <div class="info-item">
-
-            <div class="info-icon">
-                ⚡
-            </div>
-
-            <div class="info-title">
-                Status
-            </div>
-
-            <div class="info-text">
-                Online
-            </div>
-
+        <!-- BUTTONS (Jangan lupa ganti tanda # dengan link asli Anda nanti) -->
+        <div class="buttons">
+            <a href="#" class="btn btn-login">LOGIN</a>
+            <a href="#" class="btn btn-register">DAFTAR</a>
         </div>
 
+        <!-- INFO BOX -->
+        <div class="info">
+            Selamat datang di RAJALIGA89. Pastikan Anda selalu menggunakan link resmi untuk kenyamanan dan keamanan akses akun Anda.
+        </div>
     </div>
-
-    <!-- STATUS -->
-    <div class="status">
-
-        <span class="dot"></span>
-
-        Sistem online
-
-    </div>
-
-    <!-- FOOTER -->
-    <footer>
-        © 2026 RAJALIGA89<br>
-        Semua hak cipta dilindungi.
-    </footer>
-
-</div>
 
 </body>
 </html>
