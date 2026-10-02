@@ -31,29 +31,20 @@
             font-family: Arial, Helvetica, sans-serif;
             color: #fff;
 
-            /* BACKGROUND DIUBAH MENJADI MERAH MARUN MEWAH */
-            background:
+            /* DIUBAH MENJADI FULL MERAH GRADASI MENYALA */
+            background: 
                 radial-gradient(
-                    circle at 50% 0%,
-                    rgba(255, 0, 0, .45),
-                    transparent 45%
-                ),
-                radial-gradient(
-                    circle at 100% 100%,
-                    rgba(212, 175, 55, .15),
-                    transparent 40%
-                ),
-                linear-gradient(
-                    145deg,
-                    #2b0000,
-                    #150000 60%,
-                    #0a0000
+                    circle at 50% 30%,
+                    #e60000 0%,
+                    #990000 50%,
+                    #590000 100%
                 );
 
+            background-attachment: fixed;
             overflow-x: hidden;
         }
 
-        /* Background pattern (Efek garis laser merah tipis) */
+        /* Background pattern (Efek garis laser tipis transparan) */
         body::before {
             content: "";
             position: fixed;
@@ -64,7 +55,7 @@
                 linear-gradient(
                     45deg,
                     transparent 48%,
-                    rgba(255, 0, 0, .04) 50%,
+                    rgba(255, 255, 255, .03) 50%,
                     transparent 52%
                 );
 
@@ -72,22 +63,22 @@
             opacity: .8;
         }
 
-        /* Red glow (Efek pendaran cahaya merah di tengah) */
+        /* Red glow tambahan untuk efek kedalaman warna merah */
         body::after {
             content: "";
             position: fixed;
 
-            width: 500px;
-            height: 500px;
+            width: 600px;
+            height: 600px;
 
             left: 50%;
-            top: 20%;
+            top: 30%;
 
             transform: translate(-50%, -50%);
 
-            background: rgba(255, 0, 0, .15);
+            background: rgba(255, 50, 50, 0.2);
 
-            filter: blur(100px);
+            filter: blur(120px);
             pointer-events: none;
         }
 
@@ -131,18 +122,18 @@
             object-fit: contain;
             display: block;
             
-            filter: drop-shadow(0 0 15px rgba(212,175,55, 0.15)); 
+            filter: drop-shadow(0 0 15px rgba(212,175,55, 0.2)); 
             animation: logoGlow 3s ease-in-out infinite;
         }
 
         @keyframes logoGlow {
             0%, 100% {
                 transform: scale(1);
-                filter: drop-shadow(0 0 15px rgba(212,175,55, 0.15));
+                filter: drop-shadow(0 0 15px rgba(212,175,55, 0.2));
             }
             50% {
                 transform: scale(1.03);
-                filter: drop-shadow(0 0 25px rgba(212,175,55, 0.30));
+                filter: drop-shadow(0 0 25px rgba(212,175,55, 0.40));
             }
         }
 
@@ -174,13 +165,13 @@
             color: transparent;
 
             text-shadow:
-                0 0 25px rgba(212,175,55,.12);
+                0 0 25px rgba(212,175,55,.2);
         }
 
         .subtitle {
             margin-top: 7px;
 
-            color: #aaa;
+            color: #e6b8b8; /* Diubah agak kemerahan agar serasi */
 
             font-size: 11px;
             letter-spacing: 2px;
@@ -203,11 +194,11 @@
 
             border: 1px solid rgba(212,175,55,.75);
 
-            background: #150000;
+            background: #400000;
 
             box-shadow:
-                0 20px 60px rgba(0,0,0,.60),
-                0 0 30px rgba(212,175,55,.10);
+                0 20px 60px rgba(0,0,0,.40),
+                0 0 30px rgba(212,175,55,.15);
 
             line-height: 0;
         }
@@ -235,7 +226,7 @@
                 linear-gradient(
                     110deg,
                     transparent 30%,
-                    rgba(255,255,255,.08) 50%,
+                    rgba(255,255,255,.12) 50%,
                     transparent 70%
                 );
 
@@ -298,15 +289,15 @@
             background:
                 linear-gradient(
                     135deg,
-                    rgba(130,0,0,.45),
-                    rgba(20,0,0,.85)
+                    rgba(230,0,0,.45),
+                    rgba(80,0,0,.85)
                 );
 
             border:
                 1px solid rgba(212,175,55,.65);
 
             box-shadow:
-                0 8px 25px rgba(0,0,0,.45);
+                0 8px 25px rgba(0,0,0,.35);
         }
 
         /* DAFTAR */
@@ -339,12 +330,12 @@
             background:
                 linear-gradient(
                     135deg,
-                    rgba(200,0,0,.55),
-                    rgba(30,0,0,.95)
+                    rgba(255,0,0,.60),
+                    rgba(120,0,0,.90)
                 );
 
             box-shadow:
-                0 12px 35px rgba(179,0,0,.35);
+                0 12px 35px rgba(255,0,0,.25);
         }
 
         .btn-register:hover {
@@ -360,37 +351,39 @@
             width: 100%;
             margin-top: 25px;
             padding: 15px;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 0, 0, 0.25);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             border-radius: 12px;
             text-align: center;
             font-size: 13px;
-            color: #ddd;
+            color: #fff;
             line-height: 1.6;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- LOGO -->
+        <!-- LOGO (Disesuaikan langsung ke nama file asli tanpa folder images/) -->
         <div class="logo">
-            <img src="images/logo.png" alt="Logo RAJALIGA89">
+            <img src="logo.png" alt="Logo RAJALIGA89">
         </div>
 
         <!-- BRAND -->
         <h1 class="brand">RAJALIGA89</h1>
         <p class="subtitle">AKSES LOGIN & DAFTAR RESMI</p>
 
-        <!-- BANNER -->
+        <!-- BANNER (Disesuaikan langsung ke nama file asli tanpa folder images/) -->
         <div class="banner">
-            <img src="images/banner.png" alt="Banner">
+            <img src="banner.png" alt="Banner">
         </div>
 
         <!-- BUTTONS -->
         <div class="buttons">
-            <a href="#" class="btn btn-login">LOGIN</a>
-            <a href="#" class="btn btn-register">DAFTAR</a>
+            <!-- Tulis link website Anda di dalam tanda kutip href di bawah ini -->
+            <a href="https://rajaliga89.com" class="btn btn-login">LOGIN</a>
+            <a href="https://rajaliga89.com" class="btn btn-register">DAFTAR</a>
         </div>
 
         <!-- INFO BOX -->
