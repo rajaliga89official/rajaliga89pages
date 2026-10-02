@@ -31,7 +31,6 @@
             font-family: Arial, Helvetica, sans-serif;
             color: #fff;
 
-            /* BACKGROUND FULL MERAH GRADASI MENYALA */
             background: 
                 radial-gradient(
                     circle at 50% 30%,
@@ -370,83 +369,56 @@
         }
 
         /* =========================
-           TABEL INFORMASI SITUS PREMIUM
+           INFO BOX
         ========================= */
 
-        .info-table-container {
+        .info {
             width: 100%;
             margin-top: 25px;
-            background: #0f0a02;
-            border: 2px solid #e2b63e;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(255, 215, 0, 0.3);
             border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 0 20px rgba(226, 182, 62, 0.2);
-        }
-
-        .info-table-header {
-            background: linear-gradient(to bottom, #ffe485, #cca331);
-            color: #000;
-            padding: 12px;
             text-align: center;
-            font-size: 18px;
-            font-weight: 900;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            border-bottom: 2px solid #e2b63e;
-            text-shadow: 0 1px 1px rgba(255,255,255,0.4);
-        }
-
-        .info-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .info-table td {
-            padding: 14px 15px;
             font-size: 13px;
-            border-bottom: 1px solid rgba(226, 182, 62, 0.2);
-            vertical-align: middle;
-        }
-
-        .info-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .info-label {
-            font-weight: bold;
             color: #fff;
-            width: 40%;
-            text-align: center;
+            line-height: 1.6;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
         }
+    </style>
+</head>
+<body>
 
-        .info-value {
-            font-weight: bold;
-            color: #fff;
-            width: 60%;
-            text-align: center;
-        }
+    <div class="container">
+        
+        <!-- KOTAK PREMIUM EMAS TERANG -->
+        <div class="branding-box">
+            <!-- LOGO -->
+            <div class="logo">
+                <img src="logo.png" alt="Logo RAJALIGA89">
+            </div>
 
-        /* Footer Copyright */
-.info-table-footer {
-background: linear-gradient(to bottom, #ffe485, #cca331);
-color: #000;
-padding: 10px;
-text-align: center;
-font-size: 11px;
-font-weight: bold;
-letter-spacing: 1px;
-border-top: 2px solid #e2b63e;
-}
+            <!-- BRAND -->
+            <h1 class="brand">RAJALIGA89</h1>
+            <p class="subtitle">AKSES LOGIN & DAFTAR RESMI</p>
+        </div>
 
-INFORMASI SITUS
-Nama Situs
-	RAJALIGA89
-Minimal Deposit
-	Rp. 10.000
-Minimal Withdraw
-	Rp. 50.000
-Metode Deposit
-	Transfer Bank, E-Wallet, Scan Qris
-Layanan
-	Aktif 24 Jam Nonstop
-© Copyright 2026 RAJALIGA89 OFFICIAL
+        <!-- BANNER -->
+        <div class="banner">
+            <img src="banner.png" alt="Banner">
+        </div>
+
+        <!-- BUTTONS -->
+        <div class="buttons">
+            <a href="https://rajaliga89.com" class="btn btn-login">LOGIN</a>
+            <a href="https://rajaliga89.com" class="btn btn-register">DAFTAR</a>
+        </div>
+
+        <!-- INFO BOX -->
+        <div class="info">
+            Selamat datang di RAJALIGA89. Pastikan Anda selalu menggunakan link resmi untuk kenyamanan dan keamanan akses akun Anda.
+        </div>
+    </div>
+
+</body>
+</html>
