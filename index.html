@@ -113,24 +113,31 @@
            LOGO (Sudah Diubah: Sesuai Bentuk Asli)
         ========================= */
 
+               /* =========================
+           LOGO (Tanpa Efek Kotak)
+        ========================= */
+
         .logo {
             width: 100%;
-            max-width: 180px; /* Batas lebar maksimal logo agar tidak kebesaran */
+            max-width: 180px;
             height: auto;
 
             display: flex;
             align-items: center;
             justify-content: center;
 
-            border-radius: 0; /* Menghapus efek bulat */
-            background: transparent; /* Menghapus background emas bawaan */
-            border: none; /* Menghapus border bulat */
+            border-radius: 0;
+            
+            /* Mengubah background kotak agar menyatu dengan gradasi marun web */
+            background: linear-gradient(to bottom, #1d0000, #130000); 
+            border: none;
 
-            box-shadow:
-                0 0 45px rgba(212,175,55,.15),
-                0 0 80px rgba(179,0,0,.10);
+            /* Menyamarkan pinggiran kotak dengan efek blur halus */
+            box-shadow: 0 0 30px #130000; 
 
             animation: logoGlow 3s ease-in-out infinite;
+        }
+
         }
 
         .logo img {
