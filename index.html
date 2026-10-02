@@ -1,4 +1,4 @@
-```html
+html
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -480,5 +480,225 @@
 
             border-radius: 50%;
 
-            background: #32d17
-```
+            background: #32d17b;
+
+            box-shadow:
+                0 0 10px
+                #32d17b;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            margin-top: 18px;
+
+            text-align: center;
+
+            color: #444;
+
+            font-size: 9px;
+
+            line-height: 1.6;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 500px) {
+
+            .container {
+                padding:
+                    25px 13px;
+            }
+
+            .logo {
+                width: 85px;
+                height: 85px;
+
+                font-size: 22px;
+            }
+
+            .brand {
+                font-size: 25px;
+
+                letter-spacing: 3px;
+            }
+
+            .promo {
+                padding: 20px 15px;
+            }
+
+            .promo h1 {
+                font-size: 21px;
+            }
+
+            .buttons {
+                grid-template-columns:
+                    1fr;
+            }
+
+            .info {
+                grid-template-columns:
+                    repeat(3, 1fr);
+
+                padding: 15px 8px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+    <!-- LOGO -->
+
+    <div class="logo">
+        R89
+    </div>
+
+
+    <!-- BRAND -->
+
+    <div class="brand">
+        RAJALIGA89
+    </div>
+
+    <div class="subtitle">
+        PREMIUM ACCESS
+    </div>
+
+
+    <!-- PROMO -->
+
+    <section class="promo">
+
+        <div class="promo-label">
+            ✦ SELAMAT DATANG ✦
+        </div>
+
+        <h1>
+            AKSES RAJALIGA89
+        </h1>
+
+        <p>
+            Gunakan tombol di bawah untuk
+            menuju halaman utama situs.
+        </p>
+
+    </section>
+
+
+    <!-- LOGIN / DAFTAR -->
+
+    <div class="buttons">
+
+        <a
+            href="https://rajaliga89-mvp.my.id/"
+            class="btn btn-login"
+            rel="noopener noreferrer"
+        >
+            LOGIN
+        </a>
+
+        <a
+            href="https://rajaliga89-mvp.my.id/"
+            class="btn btn-register"
+            rel="noopener noreferrer"
+        >
+            DAFTAR
+        </a>
+
+    </div>
+
+
+    <!-- INFO -->
+
+    <div class="info">
+
+        <div class="info-item">
+
+            <div class="info-icon">
+                ★
+            </div>
+
+            <div class="info-title">
+                Platform
+            </div>
+
+            <div class="info-text">
+                RAJALIGA89
+            </div>
+
+        </div>
+
+
+        <div class="info-item">
+
+            <div class="info-icon">
+                ✓
+            </div>
+
+            <div class="info-title">
+                Akses
+            </div>
+
+            <div class="info-text">
+                24/7
+            </div>
+
+        </div>
+
+
+        <div class="info-item">
+
+            <div class="info-icon">
+                ⚡
+            </div>
+
+            <div class="info-title">
+                Akses Cepat
+            </div>
+
+            <div class="info-text">
+                Online
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- STATUS -->
+
+    <div class="status">
+
+        <span class="dot"></span>
+
+        Sistem online
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 RAJALIGA89<br>
+
+        Semua hak cipta dilindungi.
+
+    </footer>
+
+
+</div>
+
+</body>
+</html>
