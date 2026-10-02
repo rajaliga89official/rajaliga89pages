@@ -31,7 +31,6 @@
             font-family: Arial, Helvetica, sans-serif;
             color: #fff;
 
-            /* BACKGROUND FULL MERAH GRADASI MENYALA */
             background: 
                 radial-gradient(
                     circle at 50% 30%,
@@ -102,7 +101,7 @@
         }
 
         /* =========================
-           KOTAK EMAS TERANG PREMIUM
+           KOTAK PREMIUM (BRANDING BOX)
         ========================= */
         .branding-box {
             width: 100%;
@@ -112,17 +111,17 @@
             align-items: center;
             justify-content: center;
             
-            /* Garis kotak solid emas terang menyala */
-            border: 2px solid #ffd700; 
-            border-radius: 16px; 
+            /* Garis kotak emas premium */
+            border: 1.5px solid rgba(212, 175, 55, 0.4); 
+            border-radius: 16px; /* Membuat sudut kotak sedikit melengkung halus */
             
-            /* Background transparan gelap agar kontras emasnya keluar */
-            background: rgba(0, 0, 0, 0.25); 
+            /* Background transparan gelap tipis agar teks lebih terbaca */
+            background: rgba(0, 0, 0, 0.15); 
             
-            /* Efek pendaran cahaya (glow) ganda di luar dan dalam kotak */
+            /* Efek bayangan pendaran emas di sekitar kotak */
             box-shadow: 
-                0 0 25px rgba(255, 215, 0, 0.35),
-                inset 0 0 20px rgba(255, 215, 0, 0.15);
+                0 0 20px rgba(212, 175, 55, 0.08),
+                inset 0 0 15px rgba(212, 175, 55, 0.05);
         }
 
         /* =========================
@@ -146,18 +145,18 @@
             object-fit: contain;
             display: block;
             
-            filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.3)); 
+            filter: drop-shadow(0 0 15px rgba(212,175,55, 0.2)); 
             animation: logoGlow 3s ease-in-out infinite;
         }
 
         @keyframes logoGlow {
             0%, 100% {
                 transform: scale(1);
-                filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.3));
+                filter: drop-shadow(0 0 15px rgba(212,175,55, 0.2));
             }
             50% {
                 transform: scale(1.03);
-                filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.5));
+                filter: drop-shadow(0 0 25px rgba(212,175,55, 0.40));
             }
         }
 
@@ -178,7 +177,7 @@
                     90deg,
                     #9b7418,
                     #fff1a5,
-                    #ffd700,
+                    #d4af37,
                     #fff1a5,
                     #9b7418
                 );
@@ -189,18 +188,16 @@
             color: transparent;
 
             text-shadow:
-                0 0 25px rgba(255, 215, 0, 0.3);
+                0 0 25px rgba(212,175,55,.2);
         }
 
         .subtitle {
             margin-top: 7px;
 
-            color: #ffe1e1;
+            color: #e6b8b8;
 
             font-size: 11px;
             letter-spacing: 2px;
-            font-weight: bold;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
         }
 
         /* =========================
@@ -218,13 +215,13 @@
 
             border-radius: 19px;
 
-            border: 1px solid rgba(255, 215, 0, 0.75);
+            border: 1px solid rgba(212,175,55,.75);
 
             background: #400000;
 
             box-shadow:
                 0 20px 60px rgba(0,0,0,.40),
-                0 0 30px rgba(255, 215, 0, 0.2);
+                0 0 30px rgba(212,175,55,.15);
 
             line-height: 0;
         }
@@ -320,7 +317,7 @@
                 );
 
             border:
-                1px solid rgba(255, 215, 0, 0.75);
+                1px solid rgba(212,175,55,.65);
 
             box-shadow:
                 0 8px 25px rgba(0,0,0,.35);
@@ -335,7 +332,7 @@
                 linear-gradient(
                     135deg,
                     #ffe98a,
-                    #ffd700 45%,
+                    #d4af37 45%,
                     #a77c16
                 );
 
@@ -343,7 +340,7 @@
                 1px solid rgba(255,255,255,.15);
 
             box-shadow:
-                0 10px 30px rgba(255, 215, 0, 0.25);
+                0 10px 30px rgba(212,175,55,.20);
         }
 
         .btn:hover {
@@ -366,60 +363,25 @@
 
         .btn-register:hover {
             box-shadow:
-                0 15px 40px rgba(255, 215, 0, 0.4);
+                0 15px 40px rgba(212,175,55,.35);
         }
 
         /* =========================
-           KOTAK INFO MASING-MASING PREMIUM
+           INFO BOX
         ========================= */
 
-        .info-box-container {
+        .info {
             width: 100%;
             margin-top: 25px;
-            display: flex;
-            flex-direction: column;
-            gap: 14px; /* Memberikan jarak antar kotak info */
-        }
-
-        .info-box-item {
-            width: 100%;
-            padding: 16px 15px;
-            text-align: center;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             border-radius: 12px;
-            font-size: 13px;
-            font-weight: bold;
-            letter-spacing: 0.8px;
-            line-height: 1.5;
-            text-transform: uppercase;
-            
-            /* Warna dan style premium menyamai keserasian tombol di atas */
-            color: #fff;
-            background: linear-gradient(135deg, rgba(140, 0, 0, 0.55), rgba(35, 0, 0, 0.85));
-            border: 1.5px solid #ffd700; /* Garis kotak berwarna emas terang menyala */
-            
-            /* Efek bayangan pendaran cahaya (glow) */
-            box-shadow: 
-                0 8px 20px rgba(0, 0, 0, 0.4),
-                0 0 15px rgba(255, 215, 0, 0.15);
-        }
-
-        .info-highlight {
-            color: var(--gold-light);
-            font-weight: 900;
-        }
-
-        /* Footer Copyright */
-        .footer-copyright {
-            width: 100%;
-            margin-top: 25px;
-            padding: 12px;
             text-align: center;
-            font-size: 11px;
-            font-weight: bold;
-            color: #ffcccc;
-            letter-spacing: 1px;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.6);
-
+            font-size: 13px;
+            color: #fff;
+            line-height: 1.6;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
         }
     </style>
 </head>
@@ -427,7 +389,7 @@
 
     <div class="container">
         
-        <!-- KOTAK PREMIUM EMAS TERANG -->
+        <!-- KOTAK PREMIUM EMAS (Membungkus Logo & Brand Anda) -->
         <div class="branding-box">
             <!-- LOGO -->
             <div class="logo">
@@ -449,7 +411,12 @@
             <a href="https://rajaliga89.com" class="btn btn-login">LOGIN</a>
             <a href="https://rajaliga89.com" class="btn btn-register">DAFTAR</a>
         </div>
-            
+
+        <!-- INFO BOX -->
+        <div class="info">
+           RAJALIGA89 SITUS GACOR AUTO MAXWIN 2026 X500 PASTI TURUN
+
+            © Copyright 2026 RAJALIGA89 OFFICIAL
         </div>
     </div>
 
