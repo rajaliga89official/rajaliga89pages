@@ -306,24 +306,41 @@
             transition: .25s ease;
         }
 
-        /* LOGIN */
+        /* LOGIN (Warna Diubah Sama Persis Seperti Tombol Daftar) */
 
         .btn-login {
-            color: var(--gold-light);
+            color: #120000;
 
             background:
                 linear-gradient(
                     135deg,
-                    rgba(230,0,0,.45),
-                    rgba(80,0,0,.85)
+                    #ffe98a,
+                    #ffd700 45%,
+                    #a77c16
                 );
 
             border:
-                1px solid rgba(255, 215, 0, 0.75);
+                1px solid rgba(255,255,255,.15);
 
             box-shadow:
-                0 8px 25px rgba(0,0,0,.35);
+                0 10px 30px rgba(255, 215, 0, 0.25);
         }
+
+        .btn-login:hover {
+            border-color: #ffffff;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffe98a,
+                    #ffd700 45%,
+                    #a77c16
+                );
+
+            box-shadow:
+                0 15px 40px rgba(255, 215, 0, 0.4);
+        }
+
 
         /* DAFTAR */
 
