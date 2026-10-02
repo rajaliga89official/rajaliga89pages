@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://domain-anda.com
+Sitemap: https://rajaliga89.com
