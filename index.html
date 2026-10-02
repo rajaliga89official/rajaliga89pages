@@ -1,12 +1,12 @@
-html
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>RAJALIGA89 | Login</title>
-    <meta name="description" content="Halaman akses RAJALIGA89">
+    <title>RAJALIGA89 - Situs Resmi</title>
+    <meta name="description" content="Kunjungi situs RAJALIGA89 melalui halaman resmi ini.">
 
     <style>
         * {
@@ -15,356 +15,132 @@ html
             box-sizing: border-box;
         }
 
-        :root {
-            --gold: #d4af37;
-            --gold-light: #f5d76e;
-            --gold-dark: #9b7615;
-            --black: #050505;
-            --dark: #0d0d0d;
-            --gray: #888;
-        }
-
         body {
             min-height: 100vh;
             font-family: Arial, Helvetica, sans-serif;
+            background:
+                radial-gradient(circle at top, #252525 0%, #101010 45%, #050505 100%);
             color: #fff;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 20px;
-
-            background:
-                radial-gradient(
-                    circle at 50% 0%,
-                    rgba(212, 175, 55, .16),
-                    transparent 35%
-                ),
-                radial-gradient(
-                    circle at 0% 100%,
-                    rgba(212, 175, 55, .08),
-                    transparent 30%
-                ),
-                #050505;
         }
 
-        /* Decorative background */
-        body::before {
-            content: "";
-            position: fixed;
-            inset: 0;
-            pointer-events: none;
-            background:
-                linear-gradient(
-                    135deg,
-                    transparent 49.5%,
-                    rgba(212,175,55,.035) 50%,
-                    transparent 50.5%
-                );
-            background-size: 80px 80px;
-        }
-
-        .wrapper {
+        .container {
             width: 100%;
-            max-width: 430px;
-            position: relative;
-            z-index: 2;
+            max-width: 520px;
+            text-align: center;
         }
 
         .card {
-            position: relative;
-            padding: 42px 34px 32px;
-            border-radius: 25px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(255,255,255,.055),
-                    rgba(255,255,255,.015)
-                );
-
-            border: 1px solid rgba(212,175,55,.35);
-
-            box-shadow:
-                0 30px 80px rgba(0,0,0,.8),
-                0 0 50px rgba(212,175,55,.08);
-
-            backdrop-filter: blur(18px);
-        }
-
-        /* Gold top line */
-        .card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 12%;
-            width: 76%;
-            height: 2px;
-
-            background: linear-gradient(
-                90deg,
-                transparent,
-                var(--gold-light),
-                var(--gold),
-                transparent
-            );
-
-            box-shadow: 0 0 15px rgba(212,175,55,.7);
+            background: rgba(20, 20, 20, 0.94);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 24px;
+            padding: 42px 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
         }
 
         .logo {
-            width: 88px;
-            height: 88px;
+            width: 90px;
+            height: 90px;
             margin: 0 auto 22px;
-
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-
-            border-radius: 50%;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #f5d76e,
-                    #d4af37 50%,
-                    #8c6914
-                );
-
-            color: #080808;
-
-            font-size: 23px;
+            background: linear-gradient(135deg, #f5c542, #ff8c00);
+            color: #111;
+            font-size: 26px;
             font-weight: 900;
-            letter-spacing: 1px;
-
-            border: 3px solid rgba(255,255,255,.12);
-
-            box-shadow:
-                0 0 0 5px rgba(212,175,55,.05),
-                0 0 35px rgba(212,175,55,.25);
+            box-shadow: 0 10px 35px rgba(245, 197, 66, 0.25);
         }
 
         h1 {
-            text-align: center;
-            font-size: 29px;
-            letter-spacing: 3px;
-            margin-bottom: 8px;
-
-            background: linear-gradient(
-                90deg,
-                #b78b22,
-                #fff1a8,
-                #d4af37
-            );
-
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            font-size: 32px;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
         }
 
-        .welcome {
-            text-align: center;
-            color: #999;
-            font-size: 13px;
-            margin-bottom: 30px;
-        }
-
-        .input-group {
-            position: relative;
-            margin-bottom: 17px;
-        }
-
-        .input-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: #aaa;
-            font-size: 12px;
-            letter-spacing: .5px;
-        }
-
-        .input-wrap {
-            position: relative;
-        }
-
-        .icon {
-            position: absolute;
-            left: 16px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--gold);
-            font-size: 16px;
-            pointer-events: none;
-        }
-
-        input {
-            width: 100%;
-            height: 52px;
-
-            padding: 0 45px;
-
-            color: #fff;
-            font-size: 14px;
-
-            background: rgba(0,0,0,.55);
-
-            border: 1px solid #292929;
-            border-radius: 12px;
-
-            outline: none;
-
-            transition: .25s ease;
-        }
-
-        input::placeholder {
-            color: #555;
-        }
-
-        input:focus {
-            border-color: rgba(212,175,55,.8);
-
-            box-shadow:
-                0 0 0 3px rgba(212,175,55,.07),
-                0 0 20px rgba(212,175,55,.08);
-        }
-
-        .toggle-password {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-
-            border: none;
-            background: none;
-
-            color: #777;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        .toggle-password:hover {
-            color: var(--gold);
-        }
-
-        .login-btn {
-            width: 100%;
-            height: 53px;
-            margin-top: 8px;
-
-            border: none;
-            border-radius: 12px;
-
-            cursor: pointer;
-
-            font-size: 14px;
-            font-weight: 800;
-            letter-spacing: 1.2px;
-
-            color: #111;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #f5d76e,
-                    #d4af37 50%,
-                    #a57d18
-                );
-
-            box-shadow:
-                0 10px 30px rgba(212,175,55,.18);
-
-            transition: .25s ease;
-        }
-
-        .login-btn:hover {
-            transform: translateY(-2px);
-
-            box-shadow:
-                0 15px 35px rgba(212,175,55,.3);
-        }
-
-        .login-btn:active {
-            transform: translateY(0);
-        }
-
-        .divider {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-
-            margin: 25px 0 18px;
-
-            color: #555;
-            font-size: 10px;
-        }
-
-        .divider::before,
-        .divider::after {
-            content: "";
-            height: 1px;
-            flex: 1;
-            background: #242424;
-        }
-
-        .register-text {
-            text-align: center;
-            color: #777;
-            font-size: 12px;
+        .subtitle {
+            color: #bdbdbd;
             line-height: 1.6;
-        }
-
-        .register-text a {
-            color: var(--gold-light);
-            text-decoration: none;
-            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: 28px;
         }
 
         .status {
-            display: flex;
-            justify-content: center;
+            display: inline-flex;
             align-items: center;
-            gap: 7px;
-
-            margin-top: 22px;
-
-            color: #777;
-            font-size: 10px;
+            gap: 8px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: rgba(46, 204, 113, 0.1);
+            color: #63e6a0;
+            font-size: 13px;
+            margin-bottom: 25px;
         }
 
-        .status-dot {
-            width: 6px;
-            height: 6px;
+        .dot {
+            width: 8px;
+            height: 8px;
             border-radius: 50%;
-            background: #3dcc78;
+            background: #2ecc71;
+            box-shadow: 0 0 10px #2ecc71;
+        }
 
-            box-shadow: 0 0 8px #3dcc78;
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 16px 20px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #f5c542, #ff9800);
+            color: #111;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 800;
+            transition: 0.25s ease;
+            box-shadow: 0 10px 30px rgba(255, 152, 0, 0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(255, 152, 0, 0.35);
+        }
+
+        .countdown {
+            margin-top: 18px;
+            color: #888;
+            font-size: 13px;
+        }
+
+        .countdown span {
+            color: #fff;
+            font-weight: bold;
         }
 
         .footer {
-            text-align: center;
-            margin-top: 20px;
-
-            color: #444;
-            font-size: 9px;
+            margin-top: 25px;
+            color: #666;
+            font-size: 11px;
             line-height: 1.5;
         }
 
         @media (max-width: 480px) {
-            body {
-                padding: 15px;
+            .card {
+                padding: 35px 22px;
+                border-radius: 20px;
             }
 
-            .card {
-                padding: 36px 23px 27px;
-                border-radius: 21px;
+            h1 {
+                font-size: 27px;
             }
 
             .logo {
                 width: 78px;
                 height: 78px;
-                font-size: 20px;
-            }
-
-            h1 {
-                font-size: 25px;
+                font-size: 22px;
             }
         }
     </style>
@@ -372,151 +148,62 @@ html
 
 <body>
 
-    <main class="wrapper">
-
+    <main class="container">
         <section class="card">
 
             <div class="logo">
                 R89
             </div>
 
+            <div class="status">
+                <span class="dot"></span>
+                Situs dapat diakses
+            </div>
+
             <h1>RAJALIGA89</h1>
 
-            <p class="welcome">
-                Selamat datang, silakan lanjutkan ke situs.
+            <p class="subtitle">
+                Selamat datang di halaman akses RAJALIGA89.
+                Klik tombol di bawah untuk melanjutkan ke situs tujuan.
             </p>
 
-            <!--
-                Form ini TIDAK mengirim atau menyimpan
-                username/password ke server.
-            -->
-            <form id="loginForm">
+            <a
+                class="btn"
+                href="https://rajaliga89-mvp.my.id/"
+                id="continueButton"
+                rel="noopener noreferrer"
+            >
+                KUNJUNGI SITUS
+            </a>
 
-                <div class="input-group">
-                    <label for="username">USERNAME</label>
-
-                    <div class="input-wrap">
-
-                        <span class="icon">♙</span>
-
-                        <input
-                            type="text"
-                            id="username"
-                            placeholder="Masukkan username"
-                            autocomplete="off"
-                        >
-
-                    </div>
-                </div>
-
-                <div class="input-group">
-
-                    <label for="password">PASSWORD</label>
-
-                    <div class="input-wrap">
-
-                        <span class="icon">◆</span>
-
-                        <input
-                            type="password"
-                            id="password"
-                            placeholder="Masukkan password"
-                            autocomplete="off"
-                        >
-
-                        <button
-                            type="button"
-                            class="toggle-password"
-                            id="togglePassword"
-                            aria-label="Tampilkan password"
-                        >
-                            ◉
-                        </button>
-
-                    </div>
-                </div>
-
-                <button
-                    type="submit"
-                    class="login-btn"
-                >
-                    MASUK KE SITUS
-                </button>
-
-            </form>
-
-            <div class="divider">
-                AKSES SITUS
-            </div>
-
-            <div class="register-text">
-                Belum memiliki akun?
-                <a
-                    href="https://rajaliga89-mvp.my.id/"
-                    rel="noopener noreferrer"
-                >
-                    Daftar di situs
-                </a>
-            </div>
-
-            <div class="status">
-                <span class="status-dot"></span>
-                Sistem online
+            <div class="countdown">
+                Mengarahkan secara otomatis dalam
+                <span id="timer">5</span> detik...
             </div>
 
             <div class="footer">
-                © 2026 RAJALIGA89. All Rights Reserved.
+                © 2026 RAJALIGA89. Semua hak cipta dilindungi.
             </div>
 
         </section>
-
     </main>
 
     <script>
-
         const targetURL = "https://rajaliga89-mvp.my.id/";
+        let seconds = 5;
 
-        const form = document.getElementById("loginForm");
+        const timer = document.getElementById("timer");
 
-        const password =
-            document.getElementById("password");
+        const countdown = setInterval(() => {
+            seconds--;
 
-        const togglePassword =
-            document.getElementById("togglePassword");
+            timer.textContent = seconds;
 
-        /*
-         * Tampilkan / sembunyikan password
-         */
-        togglePassword.addEventListener("click", function () {
-
-            if (password.type === "password") {
-
-                password.type = "text";
-                togglePassword.textContent = "○";
-
-            } else {
-
-                password.type = "password";
-                togglePassword.textContent = "◉";
-
+            if (seconds <= 0) {
+                clearInterval(countdown);
+                window.location.href = targetURL;
             }
-
-        });
-
-        /*
-         * Tombol hanya melakukan redirect.
-         *
-         * Username/password tidak dikirim
-         * dan tidak disimpan oleh halaman ini.
-         */
-        form.addEventListener("submit", function (event) {
-
-            event.preventDefault();
-
-            window.location.href = targetURL;
-
-        });
-
+        }, 1000);
     </script>
 
 </body>
