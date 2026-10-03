@@ -47,27 +47,32 @@
     <meta name="twitter:image" content="https://rajaliga89.com/banner.png">
 
     <!-- Structured Data: WebSite + Organization -->
-    <script type="application/ld+json">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebSite",
-          "@id": "https://rajaliga89.com/#website",
-          "url": "https://rajaliga89.com/",
-          "name": "RAJALIGA89",
-          "inLanguage": "id-ID"
-        },
-        {
-          "@type": "Organization",
-          "@id": "https://rajaliga89.com/#organization",
-          "name": "RAJALIGA89",
-          "url": "https://rajaliga89.com/",
-          "logo": "https://rajaliga89.com/logo.png"
-        }
-      ]
+      "@type": "WebSite",
+      "@id": "https://rajaliga89.com/#website",
+      "url": "https://rajaliga89.com/",
+      "name": "RAJALIGA89",
+      "alternateName": "rajaliga89",
+      "inLanguage": "id-ID"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://rajaliga89.com/#organization",
+      "name": "RAJALIGA89",
+      "alternateName": "rajaliga89",
+      "url": "https://rajaliga89.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://rajaliga89.com/logo.png"
+      }
     }
-    </script>
+  ]
+}
+</script>
 
     <style>
         * {
